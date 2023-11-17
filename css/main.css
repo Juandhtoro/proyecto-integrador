@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 ul {
@@ -148,6 +148,7 @@ a:visited {
 }
 
 body {
+  background-color: rgb(128, 123, 123);
   display: grid;
   grid-template-areas: "header" "main" "footer";
   gap: 1vw;
@@ -163,7 +164,7 @@ body {
   grid-area: header;
 }
 .header__title {
-  font-family: Super Plants;
+  font-family: "Times New Roman", Times, serif;
   color: #212529;
 }
 
@@ -180,4 +181,16 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1vw;
+}
+
+.navbar__menu {
+  display: flex;
+}
+.navbar__item {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.home {
+  color: black;
 }/*# sourceMappingURL=main.css.map */

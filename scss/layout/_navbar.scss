@@ -2,5 +2,12 @@
 @use "../abstracts/mixins" as mix;
 
 .navbar {
+    &__menu {
+        display: flex;
+    }
 
+         &__item {
+             padding-left: 15px;
+             padding-right: 15px;
+         }
 }
