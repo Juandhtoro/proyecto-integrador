@@ -161,7 +161,7 @@ a:visited {
 }
 
 body {
-  background-image: url(/proyecto-integrador/images/background.jpg);
+  background-image: url(../images/background.jpg);
   display: grid;
   grid-template-areas: "header" "main" "footer";
   gap: 1vw;
