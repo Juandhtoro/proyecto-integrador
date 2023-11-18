@@ -18,7 +18,9 @@
 
 <body class="home">
     <header class="header">
-        <img class="header__logo" src="./images/logo.png" alt="x">
+        <div class="header__logo--container">
+            <img class="header__logo" src="./images/logo.PNG" alt="x">
+        </div>
         <h1 class="header__title">Inicio</h1>
 
         <nav class="navbar">
@@ -35,7 +37,8 @@
             <div class="slider">
                 <div class="slider__one">
                     <h5 class="slider__title">Título de primer slide</h5>
-                    <img class="slider__image" src="./images/slides/slide01.jpg" alt="Muro y mostrador de una cafetería">
+                    <img class="slider__image" src="./images/slides/slide01.jpg"
+                        alt="Muro y mostrador de una cafetería">
                 </div>
                 <div class="slider__two">
                     <h5 class="slider__title">Título de segundo slide</h5>
@@ -49,38 +52,135 @@
         </section>
 
         <section class="section section--products">
-            <div>
-                Formulario de búsqueda
-                Vínculo para crear un nuevo producto
+            <div class="card card__container--one">
+                <div>
+                    <p>
+
+                        Búsqueda de ropa: <input type="search" name="busquedamusica" placeholder="">
+
+                        <input type="submit" value="Buscar">
+
+                    </p>
+                </div>
+                <div>
+                    <a class="navbar__item" href="./form.html"><img src="./images/add.png" alt=""> Añadir elemento</a>
+                    </li>
+                </div>
             </div>
-            <figure class="card card--product">
-                <img class="card__image" src="./images/gallery/img01.jpg" alt="x">
-                <h4 class="card__title">Título de primer producto</h4>
-                <p class="card__text card__text--short">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit, deserunt perferendis.
-                    Architecto quas nesciunt ex placeat eaque aut neque expedita. Excepturi.
-                </p>
-                <div>
-                    <span class="card__price">1150,00</span>
-                    <button class="button button--sm button--confirm">Agregar</button>
-                    <span class="card__count">0</span>
-                    <button class="button button--sm button--danger">Quitar</button>
-                </div>
-            </figure>
-            <figure class="card card--product">
-                <img class="card__image" src="./images/gallery/img02.jpg" alt="x">
-                <h4 class="card__title">Título de segundo producto</h4>
-                <p class="card__text card__text--short">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit, deserunt perferendis.
-                    Architecto quas nesciunt ex placeat eaque aut neque expedita. Excepturi.
-                </p>
-                <div>
-                    <span class="card__price">550,00</span>
-                    <button class="button button--sm button--confirm">Agregar</button>
-                    <span class="card__count">0</span>
-                    <button class="button button--sm button--danger">Quitar</button>
-                </div>
-            </figure>
+            <div class="card card__container">
+                <figure class="card card--product">
+                    <img class="card__image" src="./images/gallery/img01.jpg" alt="x">
+                    <h4 class="card__title">Título de primer producto</h4>
+                    <p class="card__text card__text--short">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit, deserunt perferendis.
+                        Architecto quas nesciunt ex placeat eaque aut neque expedita. Excepturi.
+                    </p>
+                    <div>
+                        <span class="card__price">1150,00</span>
+                        <button class="button button--sm button--confirm">Agregar</button>
+                        <span class="card__count">0</span>
+                        <button class="button button--sm button--danger">Quitar</button>
+                    </div>
+                </figure>
+                <figure class="card card--product">
+                    <img class="card__image" src="./images/gallery/img02.jpg" alt="x">
+                    <h4 class="card__title">Título de segundo producto</h4>
+                    <p class="card__text card__text--short">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit, deserunt perferendis.
+                        Architecto quas nesciunt ex placeat eaque aut neque expedita. Excepturi.
+                    </p>
+                    <div>
+                        <span class="card__price">550,00</span>
+                        <button class="button button--sm button--confirm">Agregar</button>
+                        <span class="card__count">0</span>
+                        <button class="button button--sm button--danger">Quitar</button>
+                    </div>
+                </figure>
+                <figure class="card card--product">
+                    <img class="card__image" src="./images/gallery/img02.jpg" alt="x">
+                    <h4 class="card__title">Título de segundo producto</h4>
+                    <p class="card__text card__text--short">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit, deserunt perferendis.
+                        Architecto quas nesciunt ex placeat eaque aut neque expedita. Excepturi.
+                    </p>
+                    <div>
+                        <span class="card__price">550,00</span>
+                        <button class="button button--sm button--confirm">Agregar</button>
+                        <span class="card__count">0</span>
+                        <button class="button button--sm button--danger">Quitar</button>
+                    </div>
+                </figure>
+                <figure class="card card--product">
+                    <img class="card__image" src="./images/gallery/img02.jpg" alt="x">
+                    <h4 class="card__title">Título de segundo producto</h4>
+                    <p class="card__text card__text--short">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit, deserunt perferendis.
+                        Architecto quas nesciunt ex placeat eaque aut neque expedita. Excepturi.
+                    </p>
+                    <div>
+                        <span class="card__price">550,00</span>
+                        <button class="button button--sm button--confirm">Agregar</button>
+                        <span class="card__count">0</span>
+                        <button class="button button--sm button--danger">Quitar</button>
+                    </div>
+                </figure>
+                <figure class="card card--product">
+                    <img class="card__image" src="./images/gallery/img02.jpg" alt="x">
+                    <h4 class="card__title">Título de segundo producto</h4>
+                    <p class="card__text card__text--short">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit, deserunt perferendis.
+                        Architecto quas nesciunt ex placeat eaque aut neque expedita. Excepturi.
+                    </p>
+                    <div>
+                        <span class="card__price">550,00</span>
+                        <button class="button button--sm button--confirm">Agregar</button>
+                        <span class="card__count">0</span>
+                        <button class="button button--sm button--danger">Quitar</button>
+                    </div>
+                </figure>
+                <figure class="card card--product">
+                    <img class="card__image" src="./images/gallery/img02.jpg" alt="x">
+                    <h4 class="card__title">Título de segundo producto</h4>
+                    <p class="card__text card__text--short">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit, deserunt perferendis.
+                        Architecto quas nesciunt ex placeat eaque aut neque expedita. Excepturi.
+                    </p>
+                    <div>
+                        <span class="card__price">550,00</span>
+                        <button class="button button--sm button--confirm">Agregar</button>
+                        <span class="card__count">0</span>
+                        <button class="button button--sm button--danger">Quitar</button>
+                    </div>
+                </figure>
+                <figure class="card card--product">
+                    <img class="card__image" src="./images/gallery/img02.jpg" alt="x">
+                    <h4 class="card__title">Título de segundo producto</h4>
+                    <p class="card__text card__text--short">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit, deserunt perferendis.
+                        Architecto quas nesciunt ex placeat eaque aut neque expedita. Excepturi.
+                    </p>
+                    <div>
+                        <span class="card__price">550,00</span>
+                        <button class="button button--sm button--confirm">Agregar</button>
+                        <span class="card__count">0</span>
+                        <button class="button button--sm button--danger">Quitar</button>
+                    </div>
+                </figure>
+                <figure class="card card--product">
+                    <img class="card__image" src="./images/gallery/img02.jpg" alt="x">
+                    <h4 class="card__title">Título de segundo producto</h4>
+                    <p class="card__text card__text--short">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit, deserunt perferendis.
+                        Architecto quas nesciunt ex placeat eaque aut neque expedita. Excepturi.
+                    </p>
+                    <div>
+                        <span class="card__price">550,00</span>
+                        <button class="button button--sm button--confirm">Agregar</button>
+                        <span class="card__count">0</span>
+                        <button class="button button--sm button--danger">Quitar</button>
+                    </div>
+                </figure>
+            </div>
         </section>
     </main>
 

@@ -5,7 +5,7 @@ $_width: 100%;
 
 .slider {
     position: relative;
-    height: 25vh;
+    height: auto;
     width: calc($_width * 3);
     display: flex;
 

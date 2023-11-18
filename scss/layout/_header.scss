@@ -4,8 +4,19 @@
 .header {
     grid-area: header;
 
+    &__logo--container {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__logo {
+        opacity: 0.8;
+        width: 40vw;
+        border-radius: 10px;
+    }
+
     &__title {
-        font-family: 'Times New Roman', Times, serif;
+        font-family: 'Monserrat';
         color: var.$textColorPrimary;
     }
 }

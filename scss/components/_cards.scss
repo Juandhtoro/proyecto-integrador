@@ -3,10 +3,26 @@
 
 .card {
     padding: 1vw;
-    background-color: beige;
+    opacity: 0.9;
+
+    &__container--one {
+        display: flex;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &--product {
+        background-color: white;
+        margin: 5px;
+    }
 
     &__image {
-        width: 25%;
+        width: 100%;
     }
 
     &__title {
