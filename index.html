@@ -24,11 +24,16 @@
         <h1 class="header__title">Inicio</h1>
 
         <nav class="navbar">
-            <ul class="navbar__menu">
-                <li><a class="navbar__item navbar__item--active" href="./index.html">Inicio</a></li>
-                <li><a class="navbar__item" href="./about.html">Nosotros</a></li>
-                <li><a class="navbar__item" href="./contact.html">Contacto</a></li>
-            </ul>
+            <div>
+                <ul class="navbar__menu">
+                    <li><a class="navbar__item navbar__item--active" href="./index.html">Inicio</a></li>
+                    <li><a class="navbar__item" href="./about.html">Nosotros</a></li>
+                    <li><a class="navbar__item" href="./contact.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <a class="navbar__cart"><img src="./images/cart.png" alt=""></a>
+            </div>
         </nav>
     </header>
 
@@ -36,17 +41,17 @@
         <section class="section section--slider">
             <div class="slider">
                 <div class="slider__one">
-                    <h5 class="slider__title">Título de primer slide</h5>
-                    <img class="slider__image" src="./images/slides/slide01.jpg"
+                    <h5 class="slider__title"></h5>
+                    <img class="slider__image" src="./images/slides/slide01.PNG"
                         alt="Muro y mostrador de una cafetería">
                 </div>
                 <div class="slider__two">
-                    <h5 class="slider__title">Título de segundo slide</h5>
-                    <img class="slider__image" src="./images/slides/slide02.jpg" alt="Una taza de café">
+                    <h5 class="slider__title"></h5>
+                    <img class="slider__image" src="./images/slides/slide02.PNG" alt="Una taza de café">
                 </div>
                 <div class="slider__three">
-                    <h5 class="slider__title">Título de tercer slide</h5>
-                    <img class="slider__image" src="./images/slides/slide03.jpg" alt="Preparación de café">
+                    <h5 class="slider__title"></h5>
+                    <img class="slider__image" src="./images/slides/slide03.PNG" alt="Preparación de café">
                 </div>
             </div>
         </section>
@@ -57,127 +62,229 @@
                     <p>
 
                         Búsqueda de ropa: <input type="search" name="busquedamusica" placeholder="">
-
                         <input type="submit" value="Buscar">
-
                     </p>
                 </div>
                 <div>
                     <a class="navbar__item" href="./form.html"><img src="./images/add.png" alt=""> Añadir elemento</a>
-                    </li>
                 </div>
             </div>
             <div class="card card__container">
                 <figure class="card card--product">
-                    <img class="card__image" src="./images/gallery/img01.jpg" alt="x">
-                    <h4 class="card__title">Título de primer producto</h4>
+                    <div class="card__image__container">
+                        <img class="card__image" src="./images/gallery/boots.PNG" alt="x">
+                    </div>
+                    <h4 class="card__title">BOTAS TREKKING MUJER GRIS</h4>
                     <p class="card__text card__text--short">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit, deserunt perferendis.
-                        Architecto quas nesciunt ex placeat eaque aut neque expedita. Excepturi.
+                        Para las largas caminatas en el bosque o la montaña, fabricada de materiales duraderos y
+                        transpirables que ofrecen por igual comodidad y protección para tus pies, fabricadas en cuero
+                        Cafe.
                     </p>
-                    <div>
-                        <span class="card__price">1150,00</span>
-                        <button class="button button--sm button--confirm">Agregar</button>
-                        <span class="card__count">0</span>
-                        <button class="button button--sm button--danger">Quitar</button>
+                    <span class="card__price">358.900,00</span>
+                    <div class="card__button__container">
+                        <button onClick="add('1')" class="button button--sm button--confirm">Agregar</button>
+                        <input class="input" required type="number" id="value" placeholder="0" disabled>
+                        <!-- <span class="card__count">0</span> -->
+                        <button onClick="quit('1')" class="button button--sm button--danger">Quitar</button>
                     </div>
                 </figure>
+
                 <figure class="card card--product">
-                    <img class="card__image" src="./images/gallery/img02.jpg" alt="x">
-                    <h4 class="card__title">Título de segundo producto</h4>
+                    <div class="card__image__container">
+                        <img class="card__image" src="./images/gallery/boots01.PNG" alt="x">
+                    </div>
+                    <h4 class="card__title">BOTAS TREKKING MUJER AZUL</h4>
                     <p class="card__text card__text--short">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit, deserunt perferendis.
-                        Architecto quas nesciunt ex placeat eaque aut neque expedita. Excepturi.
+                        Para las largas caminatas en el bosque o la montaña, fabricada de materiales duraderos y
+                        transpirables que ofrecen por igual comodidad y protección para tus pies, fabricadas en cuero
+                        Fulton.
                     </p>
-                    <div>
-                        <span class="card__price">550,00</span>
-                        <button class="button button--sm button--confirm">Agregar</button>
-                        <span class="card__count">0</span>
-                        <button class="button button--sm button--danger">Quitar</button>
+                    <span class="card__price">358.900,00</span>
+                    <div class="card__button__container">
+                        <button onClick="add('2')" class="button button--sm button--confirm">Agregar</button>
+                        <!-- <span class="card__count"> 0 </span> -->
+                        <input class="input" required type="number" id="value01" placeholder="0" disabled>
+                        <button onClick="quit('2')" class="button button--sm button--danger">Quitar</button>
                     </div>
                 </figure>
+
                 <figure class="card card--product">
-                    <img class="card__image" src="./images/gallery/img02.jpg" alt="x">
-                    <h4 class="card__title">Título de segundo producto</h4>
+                    <div class="card__image__container">
+                        <img class="card__image" src="./images/gallery/boots02.PNG" alt="x">
+                    </div>
+                    <h4 class="card__title">BOTAS OUTDOOR HOMBRE VINOTINTO</h4>
                     <p class="card__text card__text--short">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit, deserunt perferendis.
-                        Architecto quas nesciunt ex placeat eaque aut neque expedita. Excepturi.
+                        Una entresuela acolchada ofrece un alto retorno de energía para una comodidad durante todo el
+                        día en todo tipo de senderos. Parte superior combinada con cuero, malla y red. Construcción de
+                        botín impermeable.
                     </p>
-                    <div>
-                        <span class="card__price">550,00</span>
-                        <button class="button button--sm button--confirm">Agregar</button>
-                        <span class="card__count">0</span>
-                        <button class="button button--sm button--danger">Quitar</button>
+                    <span class="card__price">599.900,00</span>
+                    <div class="card__button__container">
+                        <button onClick="add('3')" class="button button--sm button--confirm">Agregar</button>
+                        <input class="input" required type="number" id="value02" placeholder="0" disabled>
+                        <button onClick="quit('3')" class="button button--sm button--danger">Quitar</button>
                     </div>
                 </figure>
+
                 <figure class="card card--product">
-                    <img class="card__image" src="./images/gallery/img02.jpg" alt="x">
-                    <h4 class="card__title">Título de segundo producto</h4>
+                    <div class="card__image__container">
+                        <img class="card__image" src="./images/gallery/jacket.PNG" alt="x">
+                    </div>
+                    <h4 class="card__title">CHAQUETA ROMPEVIENTOS MUJER</h4>
                     <p class="card__text card__text--short">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit, deserunt perferendis.
-                        Architecto quas nesciunt ex placeat eaque aut neque expedita. Excepturi.
+                        Cómoda, liviana, antifluido y tiene cuello ajustable, puños encauchados y bolsillos con
+                        cremallera, ideal para hacer deporte, llevar a tus viajes o tu día a día
                     </p>
-                    <div>
-                        <span class="card__price">550,00</span>
-                        <button class="button button--sm button--confirm">Agregar</button>
-                        <span class="card__count">0</span>
-                        <button class="button button--sm button--danger">Quitar</button>
+
+                    <span class="card__price">159.900,00</span>
+                    <div class="card__button__container">
+                        <button onClick="add('4')" class="button button--sm button--confirm">Agregar</button>
+                        <input class="input" required type="number" id="value03" placeholder="0" disabled>
+                        <button onClick="quit('4')" class="button button--sm button--danger">Quitar</button>
                     </div>
                 </figure>
+
                 <figure class="card card--product">
-                    <img class="card__image" src="./images/gallery/img02.jpg" alt="x">
-                    <h4 class="card__title">Título de segundo producto</h4>
+                    <div class="card__image__container">
+                        <img class="card__image" src="./images/gallery/jacket02.PNG" alt="x">
+                    </div>
+                    <h4 class="card__title">CHAQUETA ROMPEVIENTOS HOMBRE ROJO-MARRÓN</h4>
                     <p class="card__text card__text--short">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit, deserunt perferendis.
-                        Architecto quas nesciunt ex placeat eaque aut neque expedita. Excepturi.
+                        Una chaqueta a prueba de la lluvia. Su tacto deportivo y sus colores frescos hacen
+                        que este cortavientos repelente al agua sea ideal para protegerse de los elementos del exterior.
+                        Tiene puños elásticos y bolsillos laterales para que protejas tus manos.
                     </p>
-                    <div>
-                        <span class="card__price">550,00</span>
-                        <button class="button button--sm button--confirm">Agregar</button>
-                        <span class="card__count">0</span>
-                        <button class="button button--sm button--danger">Quitar</button>
+                    <span class="card__price">224.900,00</span>
+                    <div class="card__button__container">
+                        <button onClick="add('5')" class="button button--sm button--confirm">Agregar</button>
+                        <input class="input" required type="number" id="value04" placeholder="0" disabled>
+                        <button onClick="quit('5')" class="button button--sm button--danger">Quitar</button>
                     </div>
                 </figure>
+
                 <figure class="card card--product">
-                    <img class="card__image" src="./images/gallery/img02.jpg" alt="x">
-                    <h4 class="card__title">Título de segundo producto</h4>
+                    <div class="card__image__container">
+                        <img class="card__image" src="./images/gallery/jacket01.PNG" alt="x">
+                    </div>
+                    <h4 class="card__title">CHAQUETA ROMPEVIENTOS HOMBRE NEGRO</h4>
                     <p class="card__text card__text--short">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit, deserunt perferendis.
-                        Architecto quas nesciunt ex placeat eaque aut neque expedita. Excepturi.
+                        Una chaqueta a prueba de la lluvia. Su tacto deportivo y sus colores frescos hacen
+                        que este cortavientos repelente al agua sea ideal para protegerse de los elementos del exterior.
+                        Tiene puños elásticos y bolsillos laterales para que protejas tus manos.
                     </p>
-                    <div>
-                        <span class="card__price">550,00</span>
-                        <button class="button button--sm button--confirm">Agregar</button>
-                        <span class="card__count">0</span>
-                        <button class="button button--sm button--danger">Quitar</button>
+                    <span class="card__price">224.900,00</span>
+                    <div class="card__button__container">
+                        <button onClick="add('6')" class="button button--sm button--confirm">Agregar</button>
+                        <input class="input" required type="number" id="value05" placeholder="0" disabled>
+                        <button onClick="quit('6')" class="button button--sm button--danger">Quitar</button>
                     </div>
                 </figure>
+
                 <figure class="card card--product">
-                    <img class="card__image" src="./images/gallery/img02.jpg" alt="x">
-                    <h4 class="card__title">Título de segundo producto</h4>
+                    <div class="card__image__container">
+                        <img class="card__image" src="./images/gallery/cap01.PNG" alt="x">
+                    </div>
+                    <h4 class="card__title">SOMBRERO BEIGE-NEGRO UNISEX</h4>
                     <p class="card__text card__text--short">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit, deserunt perferendis.
-                        Architecto quas nesciunt ex placeat eaque aut neque expedita. Excepturi.
+                        El sombrero está pensado para los entusiastas de
+                        las aventuras al aire libre. Presenta una banda con capacidad hidroabsorbente y panel de malla
+                        de ventilación para mantenerte fresco.
                     </p>
-                    <div>
-                        <span class="card__price">550,00</span>
-                        <button class="button button--sm button--confirm">Agregar</button>
-                        <span class="card__count">0</span>
-                        <button class="button button--sm button--danger">Quitar</button>
+                    <span class="card__price">136.900,00</span>
+                    <div class="card__button__container">
+                        <button onClick="add('7')" class="button button--sm button--confirm">Agregar</button>
+                        <input class="input" required type="number" id="value06" placeholder="0" disabled>
+                        <button onClick="quit('7')" class="button button--sm button--danger">Quitar</button>
                     </div>
                 </figure>
+
                 <figure class="card card--product">
-                    <img class="card__image" src="./images/gallery/img02.jpg" alt="x">
-                    <h4 class="card__title">Título de segundo producto</h4>
+                    <div class="card__image__container">
+                        <img class="card__image" src="./images/gallery/cap02.PNG" alt="x">
+                    </div>
+                    <h4 class="card__title">GORRA BLANCO-NEGRO UNISEX</h4>
                     <p class="card__text card__text--short">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit, deserunt perferendis.
-                        Architecto quas nesciunt ex placeat eaque aut neque expedita. Excepturi.
+                        Una gorra para todos los días. Este accesorio absorbe el sudor, bloquea el sol y repele la
+                        lluvia y las manchas. Es idónea para trail running o actividades outdoor. Cuenta con un cierre
+                        trasero ajustable.
                     </p>
-                    <div>
-                        <span class="card__price">550,00</span>
-                        <button class="button button--sm button--confirm">Agregar</button>
-                        <span class="card__count">0</span>
-                        <button class="button button--sm button--danger">Quitar</button>
+                    <span class="card__price">113.900,00</span>
+                    <div class="card__button__container">
+                        <button onClick="add('8')" class="button button--sm button--confirm">Agregar</button>
+                        <input class="input" required type="number" id="value07" placeholder="0" disabled>
+                        <button onClick="quit('8')" class="button button--sm button--danger">Quitar</button>
+                    </div>
+                </figure>
+
+                <figure class="card card--product">
+                    <div class="card__image__container">
+                        <img class="card__image" src="./images/gallery/bag.PNG" alt="x">
+                    </div>
+                    <h4 class="card__title">MORRAL NEGRO UNISEX</h4>
+                    <p class="card__text card__text--short">
+                        Este morral ligero antidesgarro se guarda en un bolsillo interior para accesorios. Llévalo
+                        contigo plegado para facilitar el transporte y despliégalo cuando lo necesites. Úsalo para
+                        viajes.
+                    </p>
+                    <span class="card__price">109.900,00</span>
+                    <div class="card__button__container">
+                        <button onClick="add('9')" class="button button--sm button--confirm">Agregar</button>
+                        <input class="input" required type="number" id="value08" placeholder="0" disabled>
+                        <button onClick="quit('9')" class="button button--sm button--danger">Quitar</button>
+                    </div>
+                </figure>
+
+                <figure class="card card--product">
+                    <div class="card__image__container">
+                        <img class="card__image" src="./images/gallery/bag01.PNG" alt="x">
+                    </div>
+                    <h4 class="card__title">MORRAL SALMÓN-CAFÉ MUJER</h4>
+                    <p class="card__text card__text--short">
+                        Este morral ligero antidesgarro se guarda en un bolsillo interior para accesorios. Llévalo
+                        contigo plegado para facilitar el transporte y despliégalo cuando lo necesites. Úsalo para
+                        viajes.
+                    </p>
+                    <span class="card__price">109.900,00</span>
+                    <div class="card__button__container">
+                        <button onClick="add('10')" class="button button--sm button--confirm">Agregar</button>
+                        <input class="input" required type="number" id="value09" placeholder="0" disabled>
+                        <button onClick="quit('10')" class="button button--sm button--danger">Quitar</button>
+                    </div>
+                </figure>
+
+                <figure class="card card--product">
+                    <div class="card__image__container">
+                        <img class="card__image" src="./images/gallery/bag02.PNG" alt="x">
+                    </div>
+                    <h4 class="card__title">CANGURO VERDE-NEGRO UNISEX</h4>
+                    <p class="card__text card__text--short">
+                        El canguro perfecto para que lleves todo lo que necesitas en tu siguiente aventura. Ha sido
+                        confeccionado 100% en fibra de poliéster. Proporciona un ajuste a la cintura por medio
+                        de correa.
+                    </p>
+                    <span class="card__price">130.900,00</span>
+                    <div class="card__button__container">
+                        <button onClick="add('11')" class="button button--sm button--confirm">Agregar</button>
+                        <input class="input" required type="number" id="value10" placeholder="0" disabled>
+                        <button onClick="quit('11')" class="button button--sm button--danger">Quitar</button>
+                    </div>
+                </figure>
+
+                <figure class="card card--product">
+                    <div class="card__image__container">
+                        <img class="card__image" src="./images/gallery/cap.PNG" alt="x">
+                    </div>
+                    <h4 class="card__title">GORRO NEGRO-GRIS UNISEX</h4>
+                    <p class="card__text card__text--short">
+                        Si la aventura se aproxima, debes estar equipado con elementos duraderos y de máxima calidad.
+                        Este gorro está listo para todo tipo de aventura exterior, sus materiales permiten comodidad,
+                        abrigo y frescura
+                    </p>
+                    <span class="card__price">93.900,00</span>
+                    <div class="card__button__container">
+                        <button onClick="add('12')" class="button button--sm button--confirm">Agregar</button>
+                        <input class="input" required type="number" id="value11" placeholder="0" disabled>
+                        <button onClick="quit('12')" class="button button--sm button--danger">Quitar</button>
                     </div>
                 </figure>
             </div>

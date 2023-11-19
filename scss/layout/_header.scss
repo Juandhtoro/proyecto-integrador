@@ -5,13 +5,11 @@
     grid-area: header;
 
     &__logo--container {
-        display: flex;
-        justify-content: center;
     }
 
     &__logo {
         opacity: 0.8;
-        width: 40vw;
+        width: 20vw;
         border-radius: 10px;
     }
 

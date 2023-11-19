@@ -14,19 +14,35 @@
     &__container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        background-color: rgb(236, 232, 232);
+        border-radius: 10px;
+    }
+
+    &__image__container {
+        display: flex;
     }
 
     &--product {
         background-color: white;
         margin: 5px;
+        border-radius: 10px;
     }
 
     &__image {
-        width: 100%;
+        width: 60%;
+        margin: 0 auto;
+        border-radius: 10px;
     }
 
     &__title {
-        color: green;
+        color: red;
+        margin-bottom: 5px;
+    }
+
+    &__button__container {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
     }
 
     &__price {

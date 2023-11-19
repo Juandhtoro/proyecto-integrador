@@ -87,16 +87,30 @@ a:visited {
 .card__container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  background-color: rgb(236, 232, 232);
+  border-radius: 10px;
+}
+.card__image__container {
+  display: flex;
 }
 .card--product {
   background-color: white;
   margin: 5px;
+  border-radius: 10px;
 }
 .card__image {
-  width: 100%;
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 10px;
 }
 .card__title {
-  color: green;
+  color: red;
+  margin-bottom: 5px;
+}
+.card__button__container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 .card__price {
   font-weight: bold;
@@ -161,7 +175,6 @@ a:visited {
 }
 
 body {
-  background-image: url(../images/background.jpg);
   display: grid;
   grid-template-areas: "header" "main" "footer";
   gap: 1vw;
@@ -176,13 +189,9 @@ body {
 .header {
   grid-area: header;
 }
-.header__logo--container {
-  display: flex;
-  justify-content: center;
-}
 .header__logo {
   opacity: 0.8;
-  width: 40vw;
+  width: 20vw;
   border-radius: 10px;
 }
 .header__title {
@@ -205,6 +214,13 @@ body {
   gap: 1vw;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar__cart {
+  cursor: pointer;
+}
 .navbar__menu {
   display: flex;
 }

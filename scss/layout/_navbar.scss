@@ -2,11 +2,18 @@
 @use "../abstracts/mixins" as mix;
 
 .navbar {
+    display: flex;
+    justify-content: space-between;
+
+    &__cart {
+        cursor: pointer;
+    }
+
     &__menu {
         display: flex;
     }
 
-         &__item {
-             padding-right: 15px;
-         }
+    &__item {
+        padding-right: 15px;
+    }
 }
