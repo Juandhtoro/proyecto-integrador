@@ -69,4 +69,14 @@
             content: "$ ";
         }
     }
+
+    @media only screen and (max-width: 768px) {
+
+        &__container {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            background-color: rgb(236, 232, 232);
+            border-radius: 10px;
+        }
+    }
 }

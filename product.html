@@ -19,7 +19,7 @@
 <body class="contact">
     <header class="header">
         <img class="header__logo" src="./images/logo.png" alt="x">
-        <h1 class="header__title">Contacto</h1>
+        <h1 class="header__title">Registro de nuevos productos</h1>
 
         <nav class="navbar">
             <ul class="navbar__menu">
@@ -35,38 +35,30 @@
             <div class="form">
                 <fieldset class="box">
                     <div class="form form__boxone">
-                        <label class="text">Nombre:*</label>
+                        <label class="text">Nombre del producto:*</label>
                         <input class="input" required type="text" id="name" pattern="^[a-zA-Z ]+$" placeholder="">
                     </div>
                     <div class="form form__boxone">
-                        <label class="text">Apellido:*</label>
-                        <input class="input" required type="text" id="surname" pattern="^[a-zA-Z ]+$" placeholder="">
+                        <label class="text">Serie:*</label>
+                        <input class="input" type="text" id="serie" pattern="^[0-9]+$" required>
                     </div>
                     <div class="form form__boxone">
-                        <label class="text">Documento:*</label>
-                        <input class="input" type="text" id="id" pattern="^[0-9]+$" required>
-                    </div>
-                    <div class="form form__boxone">
-                        <label class="text">Nacionalidad:*</label>
-                        <select id="id-pais" name="country" required>
+                        <label class="text">Tipo de producto:*</label>
+                        <select id="id-pais" name="type" required>
                             <option value="">- Seleccionar -</option>
-                            <option value="1">Argentina</option>
-                            <option value="2">Colombia</option>
-                            <option value="3">Paraguay</option>
+                            <option value="1">Chaqueta</option>
+                            <option value="2">Botas</option>
+                            <option value="3">Accesorios</option>
                         </select>
                     </div>
                     <div class="form form__boxone">
-                        <label class="text">Teléfono:</label>
-                        <input class="input" type="tel" id="phone" pattern="^[0-9]+$" required placeholder="Código de área y número">
+                        <label class="text">Cantidad:*</label>
+                        <input class="input" type="text" id="quantity" pattern="^[0-9]+$"
+                            placeholder="Ingrese el número de productos" required>
                     </div>
                     <div class="form form__boxone">
-                        <label class="text">Dirección de correo electrónico:*</label>
-                        <input class="input" type="email" id="email" required autocomplete="off"
-                            placeholder="Ej: mail@gmail.com">
-                    </div>
-                    <div class="form form__boxone">
-                        <label class="text">Inquietudes y comentarios</label>
-                        <textarea name="comments" id="comments" cols="10" rows="10"></textarea>
+                        <label class="text">Descripción del producto:*</label>
+                        <textarea name="desc" id="desc" cols="10" rows="10" required></textarea>
                     </div>
                 </fieldset>
 
@@ -76,6 +68,7 @@
             </div>
         </form>
     </main>
+
 
     <footer class="footer">
         <p class="footer_text">&copy;2023 Javascript</p>

@@ -39,18 +39,16 @@
 
     <main class="main">
         <section class="section section--slider">
+            <h3>¡Bienvenidos a Powerful Mountain!</h3>
             <div class="slider">
                 <div class="slider__one">
-                    <h5 class="slider__title"></h5>
                     <img class="slider__image" src="./images/slides/slide01.PNG"
                         alt="Muro y mostrador de una cafetería">
                 </div>
                 <div class="slider__two">
-                    <h5 class="slider__title"></h5>
                     <img class="slider__image" src="./images/slides/slide02.PNG" alt="Una taza de café">
                 </div>
                 <div class="slider__three">
-                    <h5 class="slider__title"></h5>
                     <img class="slider__image" src="./images/slides/slide03.PNG" alt="Preparación de café">
                 </div>
             </div>
@@ -66,7 +64,8 @@
                     </p>
                 </div>
                 <div>
-                    <a class="navbar__item" href="./form.html"><img src="./images/add.png" alt=""> Añadir elemento</a>
+                    <a class="navbar__item" href="./product.html"><img src="./images/add.png" alt=""> Añadir
+                        elemento</a>
                 </div>
             </div>
             <div class="card card__container">
@@ -83,7 +82,7 @@
                     <span class="card__price">358.900,00</span>
                     <div class="card__button__container">
                         <button onClick="add('1')" class="button button--sm button--add">Agregar</button>
-                        <input class="input" required type="number" id="value" placeholder="0" disabled>
+                        <input class="input" type="number" id="value" min="1" step="1" disabled>
                         <button onClick="quit('1')" class="button button--sm button--remove">Quitar</button>
                     </div>
                 </figure>
@@ -101,8 +100,7 @@
                     <span class="card__price">358.900,00</span>
                     <div class="card__button__container">
                         <button onClick="add('2')" class="button button--sm button--add">Agregar</button>
-                        <!-- <span class="card__count"> 0 </span> -->
-                        <input class="input" required type="number" id="value01" placeholder="0" disabled>
+                        <input class="input" type="number" id="value01" min="1" step="1" disabled>
                         <button onClick="quit('2')" class="button button--sm button--remove">Quitar</button>
                     </div>
                 </figure>
@@ -120,7 +118,7 @@
                     <span class="card__price">599.900,00</span>
                     <div class="card__button__container">
                         <button onClick="add('3')" class="button button--sm button--add">Agregar</button>
-                        <input class="input" required type="number" id="value02" placeholder="0" disabled>
+                        <input class="input" type="number" id="value02" min="1" step="1" disabled>
                         <button onClick="quit('3')" class="button button--sm button--remove">Quitar</button>
                     </div>
                 </figure>
@@ -138,7 +136,7 @@
                     <span class="card__price">159.900,00</span>
                     <div class="card__button__container">
                         <button onClick="add('4')" class="button button--sm button--add">Agregar</button>
-                        <input class="input" required type="number" id="value03" placeholder="0" disabled>
+                        <input class="input" type="number" id="value03" min="1" step="1" disabled>
                         <button onClick="quit('4')" class="button button--sm button--remove">Quitar</button>
                     </div>
                 </figure>
@@ -156,7 +154,7 @@
                     <span class="card__price">224.900,00</span>
                     <div class="card__button__container">
                         <button onClick="add('5')" class="button button--sm button--add">Agregar</button>
-                        <input class="input" required type="number" id="value04" placeholder="0" disabled>
+                        <input class="input" type="number" id="value04" min="1" step="1" disabled>
                         <button onClick="quit('5')" class="button button--sm button--remove">Quitar</button>
                     </div>
                 </figure>
@@ -174,7 +172,7 @@
                     <span class="card__price">224.900,00</span>
                     <div class="card__button__container">
                         <button onClick="add('6')" class="button button--sm button--add">Agregar</button>
-                        <input class="input" required type="number" id="value05" placeholder="0" disabled>
+                        <input class="input" type="number" id="value05" min="1" step="1" disabled>
                         <button onClick="quit('6')" class="button button--sm button--remove">Quitar</button>
                     </div>
                 </figure>
@@ -192,7 +190,7 @@
                     <span class="card__price">136.900,00</span>
                     <div class="card__button__container">
                         <button onClick="add('7')" class="button button--sm button--add">Agregar</button>
-                        <input class="input" required type="number" id="value06" placeholder="0" disabled>
+                        <input class="input" type="number" id="value06" min="1" step="1" disabled>
                         <button onClick="quit('7')" class="button button--sm button--remove">Quitar</button>
                     </div>
                 </figure>
@@ -210,7 +208,7 @@
                     <span class="card__price">113.900,00</span>
                     <div class="card__button__container">
                         <button onClick="add('8')" class="button button--sm button--add">Agregar</button>
-                        <input class="input" required type="number" id="value07" placeholder="0" disabled>
+                        <input class="input" type="number" id="value07" min="1" step="1" disabled>
                         <button onClick="quit('8')" class="button button--sm button--remove">Quitar</button>
                     </div>
                 </figure>
@@ -228,7 +226,7 @@
                     <span class="card__price">109.900,00</span>
                     <div class="card__button__container">
                         <button onClick="add('9')" class="button button--sm button--add">Agregar</button>
-                        <input class="input" required type="number" id="value08" placeholder="0" disabled>
+                        <input class="input" type="number" id="value08" min="1" step="1" disabled>
                         <button onClick="quit('9')" class="button button--sm button--remove">Quitar</button>
                     </div>
                 </figure>
@@ -246,7 +244,7 @@
                     <span class="card__price">109.900,00</span>
                     <div class="card__button__container">
                         <button onClick="add('10')" class="button button--sm button--add">Agregar</button>
-                        <input class="input" required type="number" id="value09" placeholder="0" disabled>
+                        <input class="input" type="number" id="value09" min="1" step="1" disabled>
                         <button onClick="quit('10')" class="button button--sm button--remove">Quitar</button>
                     </div>
                 </figure>
@@ -264,7 +262,7 @@
                     <span class="card__price">130.900,00</span>
                     <div class="card__button__container">
                         <button onClick="add('11')" class="button button--sm button--add">Agregar</button>
-                        <input class="input" required type="number" id="value10" placeholder="0" disabled>
+                        <input class="input" type="number" id="value10" min="1" step="1" disabled>
                         <button onClick="quit('11')" class="button button--sm button--remove">Quitar</button>
                     </div>
                 </figure>
@@ -282,7 +280,7 @@
                     <span class="card__price">93.900,00</span>
                     <div class="card__button__container">
                         <button onClick="add('12')" class="button button--sm button--add">Agregar</button>
-                        <input class="input" required type="number" id="value11" placeholder="0" disabled>
+                        <input class="input" type="number" id="value11" min="1" step="1" disabled>
                         <button onClick="quit('12')" class="button button--sm button--remove">Quitar</button>
                     </div>
                 </figure>

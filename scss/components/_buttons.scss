@@ -25,6 +25,11 @@
         font-size: 1rem;
     }
 
+    &__container--contact {
+        display: flex;
+        margin: 0 auto;
+    }
+
     &--add {
         @include mix.button-default(var.$backgroundColorLight, var.$backgroundColorLight, var.$backgroundColor);
 
