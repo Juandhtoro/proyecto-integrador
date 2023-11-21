@@ -1,0 +1,18 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+$_width: 100%;
+
+.form {
+    display: grid;
+    padding: 20px;
+    grid-template-columns: 60%;
+    justify-content: center;
+   background-color: var.$backgroundColorDark;
+    border-radius: 10px;
+
+    &__boxone {
+        background-color: var.$backgroundColorLight;
+    }
+
+}

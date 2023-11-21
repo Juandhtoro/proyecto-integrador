@@ -30,8 +30,51 @@
         </nav>
     </header>
 
-    <main class="main">
+    <main class="home">
+        <form class="formulario" action="">
+            <div class="form">
+                <fieldset class="box">
+                    <div class="form form__boxone">
+                        <label class="text">Nombre:*</label>
+                        <input class="input" required type="text" id="nombre" placeholder="">
+                    </div>
+                    <div class="form form__boxone">
+                        <label class="text">Apellido:*</label>
+                        <input class="input" required type="text" id="nombreuno" placeholder="">
+                    </div>
+                    <div class="form form__boxone">
+                        <label class="text">Documento:*</label>
+                        <input class="input" required type="tel" id="apellido" placeholder="">
+                    </div>
+                    <div class="form form__boxone">
+                        <label class="text">Nacionalidad:*</label>
+                        <select id="id-pais" name="pais" aria-placeholder="" required>
+                            <option value="">- Seleccionar -</option>
+                            <option value="1">Argentina</option>
+                            <option value="2">Colombia</option>
+                            <option value="3">Paraguay</option>
+                        </select>
+                    </div>
+                    <div class="form form__boxone">
+                        <label class="text">Teléfono:</label>
+                        <input class="input" type="tel" id="tel" placeholder="Código de área y número">
+                    </div>
+                    <div class="form form__boxone">
+                        <label class="text">Dirección de correo electrónico:*</label>
+                        <input class="input" type="text" id="email" required autocomplete="off"
+                            placeholder="Ej: mail@gmail.com">
+                    </div>
+                    <div class="form form__boxone">
+                        <label class="text">Contanos un poco de vos...</label>
+                        <textarea name="" id="" cols="10" rows="10"></textarea>
+                    </div>
+                </fieldset>
 
+                <div class="card__button__container--contact">
+                    <input class="button button--sm button--confirm" type="submit" value="Enviar">
+                </div>
+            </div>
+        </form>
     </main>
 
     <footer class="footer">

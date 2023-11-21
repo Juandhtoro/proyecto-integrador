@@ -11,6 +11,11 @@
         justify-content: space-between;
     }
 
+    &__container--two {
+        background-color: rgb(236, 232, 232);
+        border-radius: 10px;
+    }
+
     &__container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -20,6 +25,14 @@
 
     &__image__container {
         display: flex;
+    }
+
+    &__image__container--about {
+        display: flex;
+        width: 50vw;
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     &--product {
@@ -43,6 +56,10 @@
         margin-top: 10px;
         display: flex;
         justify-content: space-between;
+    }
+
+    &__text--short {
+        margin-bottom: 10px;
     }
 
     &__price {

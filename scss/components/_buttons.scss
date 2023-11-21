@@ -39,7 +39,7 @@
 
         &:hover,
         &:active {
-            @include mix.button-active(darkred, red, white);
+            @include mix.button-active(var.$textColorDanger, var.$borderColorDanger, var.$backgroundColorLight);
         }
     }
 

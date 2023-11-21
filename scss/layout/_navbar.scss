@@ -16,4 +16,12 @@
     &__item {
         padding-right: 15px;
     }
+
+    &__item {
+        &:hover,
+        &:active {
+            background-color: var.$backgroundColorDark;
+            color: var.$backgroundColorLight;
+        }
+    }
 }
