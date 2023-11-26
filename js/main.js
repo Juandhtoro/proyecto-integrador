@@ -59,6 +59,7 @@ function validateEmail() {
         inputPhone.value = "";
         inputCountry.value = "";
         inputEmail.value = "";
+        inputComments.value = "";
     }
 }
 
