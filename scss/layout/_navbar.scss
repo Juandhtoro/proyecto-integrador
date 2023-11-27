@@ -18,10 +18,14 @@
     }
 
     &__item {
-        &:hover,
-        &:active {
-            background-color: var.$backgroundColorDark;
+
+        &:hover {
+            background-color: var.$textPrimaryColor;
             color: var.$backgroundColorLight;
         }
     }
+
+    &__item--active {
+            background-color: var.$textPrimaryColor;
+        }
 }

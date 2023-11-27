@@ -27,7 +27,9 @@
                 <li><a class="navbar__item" href="./about.html">Nosotros</a></li>
                 <li><a class="navbar__item navbar__item--active" href="./contact.html">Contacto</a></li>
             </ul>
+
         </nav>
+
     </header>
 
     <main class="home">
@@ -35,38 +37,51 @@
             <div class="form">
                 <fieldset class="box">
                     <div class="form form__boxone">
-                        <label class="text">Nombre del producto:*</label>
-                        <input class="input" required type="text" id="name" pattern="^[a-zA-Z ]+$" placeholder="">
+                        <label for="id-product-name" class="text">Nombre del producto:*</label>
+                        <input class="input" type="text" id="id-product-name" placeholder="">
                     </div>
+
                     <div class="form form__boxone">
-                        <label class="text">Serie:*</label>
-                        <input class="input" type="text" id="serie" pattern="^[0-9]+$" required>
+                        <label for="id-serie" class="text">Serie:*</label>
+                        <input class="input" type="text" id="id-serie">
                     </div>
+
                     <div class="form form__boxone">
-                        <label class="text">Tipo de producto:*</label>
-                        <select id="id-pais" name="type" required>
+                        <label for="id-product-type" class="text">Tipo de producto:*</label>
+                        <select id="id-product-type" name="type">
                             <option value="">- Seleccionar -</option>
                             <option value="1">Chaqueta</option>
                             <option value="2">Botas</option>
                             <option value="3">Accesorios</option>
                         </select>
                     </div>
+
                     <div class="form form__boxone">
-                        <label class="text">Cantidad:*</label>
-                        <input class="input" type="text" id="quantity" pattern="^[0-9]+$"
-                            placeholder="Ingrese el número de productos" required>
+                        <label for="id-amount" class="text">Cantidad:*</label>
+                        <input class="input" type="text" id="id-amount" placeholder="Ingrese el número de productos">
                     </div>
+
                     <div class="form form__boxone">
-                        <label class="text">Descripción del producto:*</label>
-                        <textarea name="desc" id="desc" cols="10" rows="10" required></textarea>
+                        <label for="id-product-description">Descripción del producto:*</label>
+                        <textarea name="desc" class="input--text" id="id-product-description" cols="10"
+                            rows="10"></textarea>
                     </div>
+
+                    <div class="form form__boxone">
+                        <span class="input-check--form--product"></span>
+                    </div>
+
                 </fieldset>
 
                 <div class="button button__container--contact">
-                    <input class="button button--sm button--add" type="submit" value="Enviar">
+                    <button class="button button--sm button--add button--form" type="button"
+                        id="button--form--01">Enviar</button>
                 </div>
+
             </div>
+
         </form>
+
     </main>
 
 
@@ -74,7 +89,8 @@
         <p class="footer_text">&copy;Copyright 2023 Powerful Mountain. All rights reserved.</p>
     </footer>
 
-    <script src="./js/main.js"></script>
+    <script src="./js/product.js"></script>
+
 </body>
 
 </html>

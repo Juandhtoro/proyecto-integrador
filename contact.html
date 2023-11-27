@@ -34,54 +34,64 @@
         <form class="formulario">
             <div class="form">
                 <fieldset class="box">
-                    <form id="myform">
-                        <div class="form form__boxone">
-                            <label class="text">Nombre:*</label>
-                            <input class="input" required type="text" id="id-name" placeholder="">
-                        </div>
-                        <div class="form form__boxone">
-                            <label class="text">Apellido:*</label>
-                            <input class="input" required type="text" id="id-surname" placeholder="">
-                        </div>
-                        <div class="form form__boxone">
-                            <label class="text">Nacionalidad:*</label>
-                            <select id="id-country" name="country" required>
-                                <option value="">- Seleccionar -</option>
-                                <option value="1">Argentina</option>
-                                <option value="2">Colombia</option>
-                                <option value="3">Paraguay</option>
-                            </select>
-                        </div>
-                        <div class="form form__boxone">
-                            <label class="text">Teléfono:</label>
-                            <input class="input" type="tel" id="id-phone" placeholder="Código de área y número">
-                        </div>
-                        <div class="form form__boxone">
-                            <label class="text">Dirección de correo electrónico:*</label>
-                            <input class="input" type="email" id="id-email" required autocomplete="off"
-                                placeholder="Ej: mail@gmail.com">
-                        </div>
-                        <div class="form form__boxone">
-                        <label class="text">Inquietudes y comentarios</label>
-                        <textarea name="comments" id="id-comments" cols="10" rows="10"></textarea>
+                    <div class="form form__boxone">
+                        <label class="text">Nombre:*</label>
+                        <input class="input" required type="text" id="id-name" placeholder="">
                     </div>
-                        <div class="form form__boxone">
-                            <span id="input-check"></span>
-                        </div>
+
+                    <div class="form form__boxone">
+                        <label class="text">Apellido:*</label>
+                        <input class="input" required type="text" id="id-surname" placeholder="">
+                    </div>
+
+                    <div class="form form__boxone">
+                        <label class="text">Nacionalidad:*</label>
+                        <select id="id-country" name="country" required>
+                            <option value="">- Seleccionar -</option>
+                            <option value="1">Argentina</option>
+                            <option value="2">Colombia</option>
+                            <option value="3">Paraguay</option>
+                        </select>
+                    </div>
+
+                    <div class="form form__boxone">
+                        <label class="text">Teléfono:</label>
+                        <input class="input" type="tel" id="id-phone" placeholder="Código de área y número">
+                    </div>
+
+                    <div class="form form__boxone">
+                        <label class="text">Dirección de correo electrónico:*</label>
+                        <input class="input" type="email" id="id-email" required autocomplete="off"
+                            placeholder="Ej: mail@gmail.com">
+                    </div>
+
+                    <div class="form form__boxone">
+                        <label class="text">Inquietudes y comentarios</label>
+                        <textarea name="comments" class="input--text" id="id-comments" cols="10" rows="10"></textarea>
+                    </div>
+
+                    <div class="form form__boxone">
+                        <span class="input-check--form--contact"></span>
+                    </div>
                 </fieldset>
 
                 <div class="button button__container--contact">
-                    <button class="button button--sm button--add" type="button" id="id-validate">Enviar</button>
+                    <button class="button button--sm button--add button--form" type="button"
+                        id="button--form--02">Enviar</button>
                 </div>
+
             </div>
+
         </form>
+
     </main>
 
     <footer class="footer">
         <p class="footer_text">&copy;Copyright 2023 Powerful Mountain. All rights reserved.</p>
     </footer>
 
-    <script src="./js/main.js"></script>
+    <script src="./js/product.js"></script>
+
 </body>
 
 </html>

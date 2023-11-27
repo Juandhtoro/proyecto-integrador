@@ -99,14 +99,7 @@ a:visited {
   border-radius: 10px;
 }
 .card__image__container {
-  display: flex;
-}
-.card__image__container--about {
-  display: flex;
-  width: 50vw;
-  margin: 0 auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  float: right;
 }
 .card--product {
   background-color: white;
@@ -114,12 +107,13 @@ a:visited {
   border-radius: 10px;
 }
 .card__image {
-  width: 60%;
-  margin: 0 auto;
+  width: 50vw;
   border-radius: 10px;
+  float: left;
+  margin-right: 10px;
 }
 .card__title {
-  color: red;
+  color: #ff0015;
   margin-bottom: 5px;
 }
 .card__button__container {
@@ -140,21 +134,24 @@ a:visited {
   .card__container {
     grid-template-columns: repeat(1, 1fr);
   }
-  .card__image__container--about {
-    width: 90vw;
+  .card__image {
+    width: 96vw;
   }
 }
 @media only screen and (min-width: 769px) {
   .card__container {
     grid-template-columns: repeat(3, 1fr);
   }
-  .card__image__container--about {
+  .card__image {
     width: 70vw;
   }
 }
 @media only screen and (min-width: 1200px) {
   .card__container {
     grid-template-columns: repeat(4, 1fr);
+  }
+  .card__image {
+    width: 30vw;
   }
 }
 
@@ -290,9 +287,12 @@ body {
 .navbar__item {
   padding-right: 15px;
 }
-.navbar__item:hover, .navbar__item:active {
-  background-color: rgb(0, 0, 0);
+.navbar__item:hover {
+  background-color: #ff0015;
   color: rgb(255, 255, 255);
+}
+.navbar__item--active {
+  background-color: #ff0015;
 }
 
 .table--women, .table--men {
