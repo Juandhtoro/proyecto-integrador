@@ -1,0 +1,51 @@
+@use "../../styles/scss/variables" as var;
+
+.button {
+    color: var.$colorFontLight !important;
+    background-color: green !important;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover,
+    &:active {
+        background-color: green !important;
+    }
+
+    svg {
+        font-size: var.$fontSizeMD;
+        fill: var.$colorFontLight !important;
+    }
+
+    &--danger {
+        background-color: var.$colorBackgroundDanger !important;
+
+        &:hover,
+        &:active {
+            background-color: var.$colorBackgroundVeryDanger !important;
+        }
+    }
+
+    &--black {
+        background-color: var.$colorBackgroundBlack !important;
+
+        &:hover,
+        &:active {
+            background-color: var.$colorBackgroundBlacker !important;
+        }
+    }
+
+    &--attractive {
+        background-image: linear-gradient(to right, #ff416c, #ff4b2b);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+        color: white;
+
+        &:hover,
+        &:active {
+            background-image: linear-gradient(to right, #ff4b2b, #ff416c);
+            box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.12);
+        }
+    }
+}

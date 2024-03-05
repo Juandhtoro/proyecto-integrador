@@ -1,0 +1,121 @@
+@use "../../../styles/scss/variables" as var;
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 2px black;
+    width: 100%;
+    padding: 0.25rem 0.75rem 0 0.75rem;
+    background-color: gray;
+
+    &__drawer-icon {
+        svg {
+            fill: var.$colorBackgroundLight;
+        }
+    }
+
+    &__items {
+        a {
+            color: var.$colorFontLight;
+        }
+
+        .active {
+            color: white;
+            text-shadow: 0.125rem 0.125rem 0.5rem var.$colorBorderDarker;
+
+        }
+
+        :focus {
+            background-color: black;
+        }
+
+        :hover {
+            background-color: black;
+            border-bottom-color: red;
+        }
+    }
+
+    &__shopping-cart {
+        &__icon-badge {
+            svg {
+                font-size: var.$fontSizeXL;
+                fill: var.$colorBackgroundLight;
+            }
+
+            span {
+                color: var.$colorBackgroundLight;
+                background-color: var.$colorBackgroundDarker;
+            }
+        }
+    }
+
+    &__custom-drawer {
+        .MuiDrawer-paper {
+            width: 450px;
+            background-color: #fff;
+        }
+
+        .navbar__drawer-header {
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #ccc;
+
+            .navbar__drawer-title {
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+
+        .navbar__drawer-content {
+            padding: 20px;
+
+            .MuiListItem-root {
+                margin-bottom: 10px;
+
+                .MuiButton-root {
+                    background-color: #4caf50;
+                    color: #fff;
+
+                    &:hover {
+                        background-color: #388e3c;
+                    }
+                }
+            }
+
+            .navbar__cart-total {
+                font-weight: bold;
+            }
+
+            .purchase-success-message {
+                background-color: #4caf50;
+                color: #fff;
+                padding: 10px;
+                border-radius: 5px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+        }
+    }
+
+
+
+    @media (max-width: 650px) {
+        &__items {
+            display: none;
+        }
+
+        &__custom-drawer {
+            .MuiDrawer-paper {
+                width: 300px;
+            }
+
+        }
+    }
+
+    @media (min-width: 651px) {
+        &__drawer-icon {
+            display: none;
+        }
+    }
+}
