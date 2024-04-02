@@ -12,6 +12,7 @@ import {
     ListItemIcon,
     ListItemText,
     Typography,
+    TextField,
 } from "@mui/material";
 import "./navbar.scss";
 
@@ -29,12 +30,13 @@ const Navbar = () => {
     const { shoppingCart, removeProductFromCart, clearCart, processPurchase } = useContext(ShoppingCartContext);
     const [ cartItemsCount, setCartItemsCount ] = useState(0);
     const [ totalPrice, setTotalPrice ] = useState(0);
+    const [ customerFirstName, setCustomerFirstName ] = useState("");
 
     useEffect(() => {
         const itemCount = shoppingCart.reduce((total, item) => total + item.amount, 0);
         setCartItemsCount(itemCount);
 
-        const totalPrice = shoppingCart.reduce((total, item) => total + (item.amount * item.price), 0);
+        const totalPrice = shoppingCart.reduce((total, item) => total + item.amount * item.price, 0);
         setTotalPrice(totalPrice);
     }, [shoppingCart]);
 
@@ -54,9 +56,30 @@ const Navbar = () => {
         setOpenCartDrawer(false);
     };
 
-    const handleProcessPurchase = () => {
-        processPurchase();
-        setPurchaseSuccess(true);
+    const handleProcessPurchase = async () => {
+        const customerInfo = { nombre: customerFirstName }; // Eliminado el campo de apellido
+
+        try {
+            await fetch("https://mitienda-juan.onrender.com/api/process-cart", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ items: shoppingCart, customerInfo }),
+            });
+
+            processPurchase();
+            setPurchaseSuccess(true);
+
+            setTimeout(() => {
+                setOpenCartDrawer(false);
+                setTimeout(() => {
+                    window.location.reload(); // Actualizar la página
+                }, 3000);
+            }, 3000);
+        } catch (error) {
+            console.error("Error al procesar la compra:", error);
+        }
     };
 
     const handleClearCart = () => {
@@ -86,8 +109,7 @@ const Navbar = () => {
                 <IconButton onClick={handleOnClickOpenCartDrawer}>
                     <Badge
                         className="navbar__shopping-cart__icon-badge"
-                        badgeContent={cartItemsCount}
-                    >
+                        badgeContent={cartItemsCount}>
                         <ShoppingCartOutlinedIcon/>
                     </Badge>
                 </IconButton>
@@ -96,8 +118,7 @@ const Navbar = () => {
             <Drawer
                 open={openMenuDrawer}
                 anchor="left"
-                onClose={handleOnClickCloseMenuDrawer}
-            >
+                onClose={handleOnClickCloseMenuDrawer}>
                 <List>
                     {links.map((link, index) => (
                         <ListItem
@@ -117,8 +138,7 @@ const Navbar = () => {
                 open={openCartDrawer}
                 anchor="right"
                 onClose={handleOnClickCloseCartDrawer}
-                className="navbar__custom-drawer"
-            >
+                className="navbar__custom-drawer">
                 <List>
                     <ListItem className="navbar__drawer-header">
                         <ListItemText
@@ -138,14 +158,21 @@ const Navbar = () => {
                             className="navbar__cart-total"/>
                     </ListItem>
                     <ListItem className="navbar__drawer-content">
-                        <Button onClick={handleProcessPurchase}>Procesar compra</Button>
-                        <Button onClick={handleClearCart}>Limpiar carrito</Button>
+                        <div className="navbar__customer-info">
+                            <TextField
+                                label="Nombre"
+                                value={customerFirstName}
+                                onChange={(e) => setCustomerFirstName(e.target.value)}
+                            />
+                            <div className="navbar__customer-buttons">
+                                <Button onClick={handleProcessPurchase}>Procesar compra</Button>
+                                <Button onClick={handleClearCart}>Limpiar carrito</Button>
+                            </div>
+                        </div>
                     </ListItem>
                     {purchaseSuccess && (
                         <ListItem className="navbar__drawer-content">
-                            {purchaseSuccess && (
-                                <div className="purchase-success-message">¡Compra realizada con éxito! Redirigiendo a la página principal</div>
-                            )}
+                            {purchaseSuccess && <div className="purchase-success-message">¡Compra realizada con éxito! Redirigiendo a la página principal</div>}
                         </ListItem>
                     )}
                 </List>

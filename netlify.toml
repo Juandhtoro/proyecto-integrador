@@ -1,4 +1,13 @@
 [build]
-    command = "npm run build"
+    command   = "npm run build"
     functions = "netlify/functions"
-    publish = "dist"
+    publish   = "dist"
+    base      = "/"
+
+[build.enviroment]
+    VITE_BACKEND_URL = "https://mitienda-juan.onrender.com/"
+
+[[redirects]]
+    from   = "/*"
+    to     = "/index.html"
+    status = 200
