@@ -13,8 +13,6 @@ import { useContext, useEffect, useState } from "react";
 import { ShoppingCartContext } from "../../contexts/ShoppingCartContext";
 import useProducts from "../../hooks/useProducts";
 
-const IMAGE_BASE_URL = "https://mitienda-juan.onrender.com/public/images/";
-
 const ProductCard = (props) => {
     const { product, itIsOff } = props;
     const { addProductCart, decreaseProductCart, getProductCart, removeProductFromCart } = useContext(ShoppingCartContext);
@@ -81,7 +79,7 @@ const ProductCard = (props) => {
             <CardMedia
                 component="img"
                 className="product-card__image"
-                image={`${IMAGE_BASE_URL}${product.imageFileName}`}
+                image={`${product.imageFileName}`}
                 alt={`Fotografía de ${product.name}`}
             />
             <CardContent className="product-card__content">

@@ -6,7 +6,8 @@
     gap: 1.5vh;
     width: 556px;
 
-    &__image {
+    &__image,
+    &__image--img {
         width: 556px;
 
         border: 0.0675rem solid var.$colorBorderDark;

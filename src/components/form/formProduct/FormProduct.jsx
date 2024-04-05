@@ -5,53 +5,70 @@ import { NavLink } from "react-router-dom";
 import { useFormik } from "formik";
 import { Box, MenuItem, Select } from "@mui/material";
 import "./formProduct.scss";
-
-// import validationSchema from "./formProduct.validate.js";
+import axios from "axios";
 
 import InputField from "../inputField/InputField";
-// import InputFile from "../inputFile/InputFile";
 import Button from "../../button/Button";
 import Switch from "../switch/Switch.jsx";
 import Alert from "../../alert/Alert.jsx";
-// import { ShoppingCartContext } from "../../../contexts/ShoppingCartContext";
+
+const IMAGE_BASE_URL = "https://mitienda-juan.onrender.com/public/images/";
 
 const FormProduct = (props) => {
     const { initialValues } = props;
     const { createProduct, updateProduct } = useProducts();
-    // const { updateProductInCart } = useContext(ShoppingCartContext);
     const [ openAlert, setOpenAlert ] = useState(false);
-    // const IMAGE_BASE_URL = "https://mitienda-juan.onrender.com/public/images/";
+    const [ currentImage, setCurrentImage ] = useState(initialValues.imageFileName);
 
     useEffect(() => {
         if (initialValues.id) {
+            setCurrentImage(initialValues.imageFileName);
             formik.setValues(initialValues);
         }
     }, [initialValues]);
 
     const formik = useFormik({
         initialValues: initialValues,
-        // validationSchema: validationSchema,
         onSubmit: async (values) => {
             try {
+                console.log("Valores del formulario:", values);
                 if (values.id) {
-                    await updateProduct(values); // Esperar a que se complete la actualización
-                    // updateProductInCart(values);
+                    await updateProduct(values);
                     console.log("Product updated successfully");
                 } else {
                     await createProduct(values);
-                    // updateProductInCart(values);
                     console.log("Product created successfully");
                 }
                 setOpenAlert(true);
 
                 setTimeout(() => {
                     window.location.href = "/";
-                }, 3000);
+                }, 1000);
             } catch (error) {
                 console.error("Error:", error);
             }
         },
     });
+
+    const handleImageChange = async (event) => {
+        const imageFile = event.target.files[0];
+        const formData = new FormData();
+        formData.append("file", imageFile);
+
+        try {
+            const response = await axios.post("https://mitienda-juan.onrender.com/api/products/upload", formData, {
+                headers: {
+                    "Content-Type": "multipart/form-data",
+                },
+            });
+            const filename = response.data.data.filename;
+            const imageUrl = `${IMAGE_BASE_URL}/${filename}`;
+            setCurrentImage(imageUrl);
+            formik.setFieldValue("imageFileName", imageUrl);
+        } catch (error) {
+            console.error("Error uploading image:", error);
+        }
+    };
 
     const categoryOptions = [
         { value: "Ropa", label: "Ropa" },
@@ -71,9 +88,6 @@ const FormProduct = (props) => {
         { value: "Merrell", label: "Merrell" },
     ];
 
-    // const JPG = ".jpg";
-    // const PNG = ".png";
-
     return (
         <Box
             component="form"
@@ -91,6 +105,20 @@ const FormProduct = (props) => {
                 error={formik.touched.name && Boolean(formik.errors.name)}
                 errorMessage={formik.touched.name && formik.errors.name}
                 inputProps={{ maxLength: 25 }}
+            />
+
+            <Box className="form-product__image">
+                <img
+                    src={currentImage}
+                    alt="Imagen del producto"
+                    className="form-product__image--img"
+                />
+            </Box>
+
+            <input
+                type="file"
+                accept=".jpg,.jpeg,.png"
+                onChange={handleImageChange}
             />
 
             <InputField
@@ -215,20 +243,6 @@ const FormProduct = (props) => {
                 </Box>
             </fieldset>
 
-            {/* <InputFile
-                label="Imagen"
-                name="files"
-                accept={[ JPG, PNG ]}
-                formik={formik}
-                error={formik.touched.files && Boolean(formik.errors.files)}
-                errorMessage={formik.touched.files && formik.errors.files}/> */}
-
-            {/* <Box
-                className="form-product__image"
-                component="img"
-                src={`${IMAGE_BASE_URL}/${formik.values.imageFileName}`}
-                alt="Fotografía del producto"/> */}
-
             <Switch
                 label="Está en promoción"
                 name="isPromotion"
@@ -275,7 +289,6 @@ FormProduct.propTypes = {
         brand: PropTypes.string.isRequired,
         type: PropTypes.string.isRequired,
     }),
-    isNewProduct: PropTypes.bool.isRequired,
 };
 
 FormProduct.defaultProps = {
@@ -291,7 +304,6 @@ FormProduct.defaultProps = {
         brand: "",
         type: "",
     },
-    isNewProduct: false,
 };
 
 export default FormProduct;
