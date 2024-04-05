@@ -57,7 +57,7 @@ const Navbar = () => {
     };
 
     const handleProcessPurchase = async () => {
-        const customerInfo = { nombre: customerFirstName }; // Eliminado el campo de apellido
+        const customerInfo = { nombre: customerFirstName };
 
         try {
             await fetch("https://mitienda-juan.onrender.com/api/process-cart", {
@@ -74,8 +74,8 @@ const Navbar = () => {
             setTimeout(() => {
                 setOpenCartDrawer(false);
                 setTimeout(() => {
-                    window.location.reload(); // Actualizar la página
-                }, 3000);
+                    window.location.reload();
+                }, 1000);
             }, 3000);
         } catch (error) {
             console.error("Error al procesar la compra:", error);
